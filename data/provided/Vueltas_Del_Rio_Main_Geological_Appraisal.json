@@ -1,0 +1,148 @@
+{
+  "report": {
+    "metadata": {
+      "title": "GEOLOGICAL APPRAISAL & EXPLORATION SUMMARY",
+      "property": "VUELTAS DEL RIO PROPERTY",
+      "location": "HONDURAS, CENTRAL AMERICA",
+      "client": "Geomaque Explorations Ltd.",
+      "date": "JANUARY 30, 1998",
+      "authors": [
+        {
+          "name": "John H. Paterson",
+          "credentials": "P. Eng.",
+          "affiliation": "Geomaque Explorations Ltd."
+        },
+        {
+          "name": "Phillip C. Walford",
+          "credentials": "B.Sc.",
+          "affiliation": "Geomaque Explorations Ltd."
+        }
+      ],
+      "prepared_for": "Geomaque Explorations Ltd."
+    },
+    "executive_summary": {
+      "introduction": "Geomaque Explorations Ltd. acquired 100% ownership of the Macuelizo and El Zapotal concessions (collectively, the Vueltas del Rio Property) through a merger with Milagro Minerals Inc. in January 1997. The property is situated in the State of Santa Barbara in northwestern Honduras.",
+      "report_focus": "This report details the exploration work conducted by Geomaque Explorations Ltd. since acquiring the Vueltas del Rio Property.",
+      "exploration_program_1997": "Commenced in February 1997, Geomaque initiated a drilling and exploration program aimed at bringing the Vueltas del Rio Deposit into production. The program involved HQ (60 mm diameter) diamond drill core holes, initially spaced at 40-metre centres to define the resource, followed by fill-in drilling at 15-25 metre spacing to confirm continuity. As of the report date, approximately 25,000 metres of drilling had been completed.",
+      "sampling_and_analysis": "Split core samples were sent to Chemex Laboratories in Mississauga for gold, silver, and copper analysis. Samples grading over 12 g/t gold were re-assayed. The remaining half of the split core is securely stored on-site.",
+      "resource_estimate": {
+        "zone": "San Juan Zone",
+        "previous_estimate": "Prior to acquisition, Geomaque estimated a total resource of 127,000 ounces in the San Juan Zone.",
+        "current_estimate_1997": "Following drilling, Geomaque calculated a resource of 184,000 ounces in the San Juan Zone, representing a 45% increase.",
+        "details": "This resource calculation is limited to a vertical depth of 100 metres. The remainder of the deposit has not been systematically explored to this depth, indicating significant potential for substantial resource expansion.",
+        "metallurgy": "Metallurgical testing has confirmed that all types of mineralization encountered are amenable to heap leach processing."
+      },
+      "future_work": "Additional drilling is required to fully define the tonnage and grade of the Vueltas del Rio Deposit resource. A feasibility study will follow to assess the project's economic viability.",
+      "estimated_cost": "The total estimated cost for the recommended program (additional drilling and feasibility study) is CDN$4,850,000."
+    },
+    "sections": [
+      {
+        "title": "INTRODUCTION",
+        "page": 5,
+        "content": "This report details the work performed by Geomaque Explorations Ltd. on its Vueltas del Rio Property, comprising the Macuelizo Exploitation Concession (location of the Vueltas del Rio gold/copper deposit) and the encompassing El Zapotal Exploration Concession, located in the State of Santa Barbara, northwestern Honduras. Exploration and mining activities date back to pre-colonial times. Geomaque acquired 100% ownership through a merger with Milagro Minerals Inc. in January 1997. In February 1997, Geomaque initiated a drilling and exploration program to define mineralization with the goal of production."
+      },
+      {
+        "title": "LOCATION, ACCESS & INFRASTRUCTURE",
+        "page": 5,
+        "content": "The Vueltas del Rio Property is situated in northwestern Honduras, approximately 90 km west of San Pedro Sula (see Figure 1). Access is facilitated by the two-lane paved highway (#18), which traverses the El Zapotal Exploration Concession."
+      },
+      {
+        "title": "REGIONAL & PROPERTY GEOLOGY",
+        "page": 7,
+        "content": "Honduran geology is only partially mapped at 1:50,000 scale. A 1:500,000 metallogenic map was prepared in 1991 with the Interamerican Development Bank. Airphotos from 1982 are available. Honduras lies on the northern edge of the Caribbean Plate, within the Circum-Caribbean region. Geologically, Honduras is divided into several zones; Geomaque's properties appear to straddle the Northern Cordillera Zone and the Central Cordillera Zone (Figures 3, 4)."
+      },
+      {
+        "title": "PROSPECTING HISTORY AND RESULTS OF EXPLORATION",
+        "page": 8,
+        "subsections": [
+          {
+            "title": "Historical Exploration",
+            "timeline": [
+              {
+                "period": "Pre-Colonial & Colonial",
+                "content": "Mining activity occurred sporadically since Mayan times. Organized placer mining along the Chamelecon River began with Cortez in 1526; production unknown but minor. Approximately 300 small mining operations were active during colonial times."
+              },
+              {
+                "period": "Mid 1940's (San Martin Mine)",
+                "content": "The only recorded significant production in northern Honduras from early periods came from the San Martin Mine, located within the current Macuelizo Exploitation Concession (site of Geomaque's Vueltas del Rio gold deposit). Production began in 1947. Estimated 15,000 ounces of gold were extracted from adits/tunnels, with ore reputedly grading 12-14 g/mt (Nisbet, 1988)."
+              }
+            ]
+          },
+          {
+            "title": "Geomaque 1997-1998",
+            "page": 7,
+            "items": [
+              {
+                "type": "Geophysical Survey",
+                "details": "An airborne helicopter survey covering the El Zapotal and Macuelizo concessions was completed in March 1997. The survey measured magnetic and electromagnetic properties of the rocks. Data acquisition was performed by Aerodat Inc., initial interpretation by Dr. Ian Johnson, and subsequent re-interpretation by Paterson, Grant & Watson Limited. Ten Electromagnetic (EM) targets and three magnetic/resistivity targets were identified; some align with known targets, while others are new (see maps, Appendix 3). Investigation of these anomalies is recommended and planned to commence in the second quarter of 1998."
+              },
+              {
+                "type": "Drilling",
+                "details": "The geology of the Vueltas del Rio Deposit is detailed in the Pitman/Spiteri Report, which included results from Geomaque's first seven holes. Geomaque has maintained the drilling and assaying procedures outlined previously. As of January 28, 1998, Geomaque has drilled 291 holes totaling 24,989 metres, significantly exceeding the initially projected 16,760 metres."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "ECONOMIC GEOLOGY - GOLD RESOURCE ESTIMATE",
+        "page": 10,
+        "content": "For a detailed description of economic geology, prior gold/copper resource estimates, and metallurgical testing before Geomaque's involvement, refer to Appendix 1. The details therein are unchanged since April 1997.",
+        "subsection": {
+          "title": "Geomaque 1997-1998",
+          "items": [
+            {
+              "type": "San Juan Zone Resource Estimate",
+              "announced": "December 10, 1997",
+              "table": {
+                "caption": "San Juan Zone Resource Estimate (Geomaque, Dec 1997)",
+                "columns": [
+                  "Mineralization",
+                  "Tonnes",
+                  "Grade (g/t)",
+                  "Ounces"
+                ],
+                "rows": [
+                  {
+                    "Mineralization": "Oxide",
+                    "Tonnes": 1361873,
+                    "Grade (g/t)": 1.66,
+                    "Ounces": 72770
+                  },
+                  {
+                    "Mineralization": "Transition",
+                    "Tonnes": 283959,
+                    "Grade (g/t)": 1.89,
+                    "Ounces": 17300
+                  },
+                  {
+                    "Mineralization": "Primary",
+                    "Tonnes": 1914042,
+                    "Grade (g/t)": 1.53,
+                    "Ounces": 94252
+                  }
+                ],
+                "totals": {
+                  "Tonnes": 3559874,
+                  "Grade (g/t)": 1.61,
+                  "Ounces": 184322
+                },
+                "notes": "Calculation uses a 0.4 g/t cut-off. High grades were cut to 20 g/t based on advice received from Roscoe Postle Associates in November, 1997."
+              },
+              "comparison": "The reported 184,322 ounces represent a 45% increase over the 127,000 ounces estimated by Geomaque before its drilling program commenced."
+            }
+          ]
+        }
+      },
+      {
+        "title": "CONCLUSIONS, RECOMMENDATIONS AND PROPOSED BUDGET",
+        "page": 12,
+        "conclusions": "Based on drilling and study results, it is likely that an economic gold deposit, amenable to low-cost open pit heap leach processing, will be outlined. There is potential to significantly increase the resource. The drilling program was expanded due to discovering additional gold mineralization, leading to a substantial increase in the San Juan Zone resource. Metallurgical testing confirms that all ore types are suitable for conventional heap leach processing. Further down-dip drilling is expected to increase the overall resource size.",
+        "program_1998": {
+          "overview": "An additional 9,000 m of definition drilling and 2,000 m of condemnation drilling are deemed necessary. Various programs are required before detailed engineering and construction. A feasibility study will follow. The project merits the additional work outlined.",
+          "total_estimated_cost": "CDN$4,850,000 (equivalent to US$3,400,000 as per budget table)."
+        }
+      }
+    ]
+  }
+}
