@@ -15,15 +15,9 @@ const PORT = process.env.PORT || 3001;
 // Middleware
 app.use(helmet()); // Add security headers
 app.use(cors()); // Enable CORS
-app.use(morgan('dev')); // HTTP request logger
+app.use(morgan('dev', { stream: { write: message => logger.info(message.trim()) } })); // HTTP request logger
 app.use(express.json()); // Parse JSON request body
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded request body
-
-// Custom middleware to log requests
-app.use((req, res, next) => {
-  logger.info(`${req.method} ${req.originalUrl}`);
-  next();
-});
 
 // Import routes (to be implemented)
 // const marketDataRoutes = require('./api/marketData');
@@ -47,18 +41,16 @@ app.use((req, res, next) => {
 // Error handler
 app.use((err, req, res, next) => {
   logger.error(`Error processing request: ${err.message}`, { 
-    method: req.method, 
-    url: req.originalUrl,
-    error: err.stack 
+    error: err.stack,
+    path: req.path,
+    method: req.method
   });
   res.status(500).json({ error: 'Internal Server Error' });
 });
 
 // Start server
-if (process.env.NODE_ENV !== 'test') {
-  app.listen(PORT, () => {
-    logger.info(`Server running on port ${PORT}`);
-  });
-}
+app.listen(PORT, () => {
+  logger.info(`Server running on port ${PORT}`);
+});
 
 module.exports = app; // Export for testing
