@@ -19,13 +19,18 @@ app.use(morgan('dev')); // HTTP request logger
 app.use(express.json()); // Parse JSON request body
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded request body
 
+// Custom middleware to log requests
+app.use((req, res, next) => {
+  logger.info(`${req.method} ${req.originalUrl}`);
+  next();
+});
+
 // Import routes (to be implemented)
 // const marketDataRoutes = require('./api/marketData');
 // const projectsRoutes = require('./api/projects');
 
 // Root route - basic health check
 app.get('/', (req, res) => {
-  logger.info('Health check endpoint accessed');
   res.json({ message: 'Golden Sons Mining Dashboard API is running!' });
 });
 
@@ -42,17 +47,18 @@ app.use((req, res, next) => {
 // Error handler
 app.use((err, req, res, next) => {
   logger.error(`Error processing request: ${err.message}`, { 
-    error: err.stack,
-    path: req.path,
-    method: req.method 
+    method: req.method, 
+    url: req.originalUrl,
+    error: err.stack 
   });
   res.status(500).json({ error: 'Internal Server Error' });
 });
 
 // Start server
-app.listen(PORT, () => {
-  logger.info(`Server running on port ${PORT}`);
-  logger.info(`Environment: ${process.env.NODE_ENV || 'development'}`);
-});
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(PORT, () => {
+    logger.info(`Server running on port ${PORT}`);
+  });
+}
 
 module.exports = app; // Export for testing
