@@ -1,0 +1,206 @@
+{
+  "document_type": "Memo",
+  "project_name": "Vueltas Del Rio Project",
+  "company_info": {
+    "name": "P&E MINING CONSULTANTS INC.",
+    "description": "Geologists and Mining Engineers",
+    "address": "2 County Court Blvd., Suite 478, Brampton, Ontario, L6W 3W8"
+  },
+  "memo_header": {
+    "to": "Michael Zelickson",
+    "from": "Eugene Puritch, P.Eng., FEC, CET",
+    "date": "October 17, 2023",
+    "subject": "Vueltas Del Rio Project – Review Summary"
+  },
+  "introduction": {
+    "summary": "This memo summarizes a desktop level review of the Vueltas Del Rio gold project in Honduras. The review was high-level, without detailed due diligence or a site visit. P&E's review included preliminary mineral resource model construction, pit optimization, production scheduling, and financial modelling."
+  },
+  "project_history": {
+    "title": "1. HISTORY",
+    "timeline": [
+      {
+        "event": "Brought into production",
+        "date": "December 2000",
+        "by": "Geomaque Explorations Ltd."
+      },
+      {
+        "event": "Acquired by Defiance Mining",
+        "date": "2003",
+        "from": "Geomaque Explorations Ltd."
+      },
+      {
+        "event": "Ceased operations",
+        "date": "March 2004"
+      }
+    ],
+    "production_summary": "The mining and processing operation produced 118,265 oz of gold at an approximate grade of 1.8 g/t."
+  },
+  "mineral_resource_estimate": {
+    "title": "2. MINERAL RESOURCE ESTIMATE",
+    "methodology": "P&E undertook a mineral resource update based on a drilling database acquired from past project involvement in 2003. The database contains 451 drill holes and 230 pits and trenches.",
+    "cut_off_grades": [
+      {
+        "type": "Saprolite",
+        "value": 0.18,
+        "unit": "g/t Au"
+      },
+      {
+        "type": "Oxide Cut",
+        "value": 0.18,
+        "unit": "g/t Au"
+      },
+      {
+        "type": "Transition",
+        "value": 0.28,
+        "unit": "g/t Au"
+      },
+      {
+        "type": "Sulphide",
+        "value": 0.36,
+        "unit": "g/t Au"
+      }
+    ],
+    "tables": [
+      {
+        "table_number": 1,
+        "title": "Global Mineral Resource",
+        "notes": "Estimate before pit optimization.",
+        "columns": [
+          "Classification",
+          "Tonnes (M)",
+          "Au g/t",
+          "Au (koz)"
+        ],
+        "data": [
+          {
+            "Classification": "Measured",
+            "Tonnes (M)": 5.28,
+            "Au g/t": 1.44,
+            "Au (koz)": 244.8
+          },
+          {
+            "Classification": "Indicated",
+            "Tonnes (M)": 3.73,
+            "Au g/t": 1.32,
+            "Au (koz)": 159.0
+          },
+          {
+            "Classification": "Inferred",
+            "Tonnes (M)": 1.09,
+            "Au g/t": 0.96,
+            "Au (koz)": 33.7
+          }
+        ],
+        "total": {
+          "Classification": "Total",
+          "Tonnes (M)": 10.10,
+          "Au g/t": 1.35,
+          "Au (koz)": 437.5
+        }
+      }
+    ]
+  },
+  "open_pit_optimization": {
+    "title": "3. OPEN PIT OPTIMIZATION",
+    "purpose": "To assess the potential size of the mineable portion of the mineralized body, a pit optimization exercise was completed based on the newly developed P&E mineral resource model and input parameters."
+  },
+  "production_schedule": {
+    "title": "4. PRODUCTION SCHEDULE",
+    "basis": "Conceptual schedule targeting 1 Mtpa mineralized material delivery to the heap leach crusher.",
+    "peak_mining_rate": "4 Mtpa of combined mineralized material and waste."
+  },
+  "economic_cashflow_modelling": {
+    "title": "5. ECONOMIC CASHFLOW MODELLING",
+    "methodology": "An Excel-based cashflow model was developed to determine gold production, annual revenues, costs, and discounted cashflows. All costs are in US dollars.",
+    "tables": [
+      {
+        "table_number": 5,
+        "title": "Cashflow (Life of Mine)",
+        "columns": [
+          "NET CASHFLOW",
+          "Total ($)"
+        ],
+        "data": [
+          {
+            "NET CASHFLOW": "Revenue",
+            "Total ($)": 429868671
+          },
+          {
+            "NET CASHFLOW": "(-) Operating Cost",
+            "Total ($)": -161719817
+          },
+          {
+            "NET CASHFLOW": "(-) Capex",
+            "Total ($)": -25600000
+          },
+          {
+            "NET CASHFLOW": "(-) Reclamation",
+            "Total ($)": -5000000
+          },
+          {
+            "NET CASHFLOW": "Cashflow (pre-tax)",
+            "Total ($)": 237548854
+          },
+          {
+            "NET CASHFLOW": "(-) Income Taxes",
+            "Total ($)": -61022734
+          },
+          {
+            "NET CASHFLOW": "Cashflow (after-tax)",
+            "Total ($)": 176526120
+          }
+        ]
+      },
+      {
+        "table_number": 6,
+        "title": "NPV and IRR Results",
+        "columns": [
+          "Discount Rate",
+          "Pre-Tax ($)",
+          "After-Tax ($)"
+        ],
+        "data": [
+          {
+            "Metric": "NPV (0%)",
+            "Discount Rate": "0%",
+            "Pre-Tax ($)": 237548854,
+            "After-Tax ($)": 176526120
+          },
+          {
+            "Metric": "NPV (5%)",
+            "Discount Rate": "5%",
+            "Pre-Tax ($)": 178627708,
+            "After-Tax ($)": 131926508
+          },
+          {
+            "Metric": "NPV (8%)",
+            "Discount Rate": "8%",
+            "Pre-Tax ($)": 152094462,
+            "After-Tax ($)": 111814491
+          },
+          {
+            "Metric": "NPV (10%)",
+            "Discount Rate": "10%",
+            "Pre-Tax ($)": 137163713,
+            "After-Tax ($)": 100490594
+          }
+        ],
+        "irr_payback": {
+          "IRR (Pre-Tax)": "138%",
+          "IRR (After-Tax)": "106%",
+          "Payback period (years)": 1.0
+        }
+      }
+    ]
+  },
+  "conclusion": {
+    "title": "6. CONCLUSION",
+    "summary": "The review summary indicates the Vueltas del Rio deposit is a potentially very robust project with a very high IRR and very short payback. This is attributed to the high average gold grade (approx. 1.4 g/t) and low operating cut-offs (0.15 to 0.35 g/t range).",
+    "recommendation": "The Vueltas del Rio project is a very worthy acquisition target, and the next stage of due diligence should be undertaken without delay."
+  },
+  "author_details": {
+    "name": "Eugene Puritch, P.Eng., FEC, CET",
+    "title": "President",
+    "company": "P&E Mining Consultants Inc."
+  }
+}
