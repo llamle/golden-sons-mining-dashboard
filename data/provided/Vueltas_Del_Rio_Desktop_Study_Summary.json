@@ -1,0 +1,184 @@
+{
+  "documentTitle": "Vueltas Del Rio Desktop Evaluation Summary",
+  "consultant": {
+    "name": "P&E MINING CONSULTANTS INC.",
+    "description": "Geologists and Mining Engineers"
+  },
+  "date": "Oct 2023",
+  "reportName": "Vueltas Del Rio Desktop Evaluation",
+  "pages": [
+    {
+      "pageNumber": 1,
+      "title": "Cover Page",
+      "content": [
+        {
+          "type": "title",
+          "text": "Vueltas Del Rio Desktop Evaluation"
+        },
+        {
+          "type": "subtitle",
+          "text": "Summary"
+        }
+      ]
+    },
+    {
+      "pageNumber": 2,
+      "title": "Location",
+      "content": [
+        {
+          "type": "image",
+          "description": "Composite image showing the regional location of Vueltas Del Rio Gold Mine and an aerial view of the mine site.",
+          "details": {
+            "mainMap": {
+              "type": "Regional Map",
+              "area": "Shows Honduras and bordering parts of El Salvador and Guatemala.",
+              "highlightedMine": {
+                "name": "Vueltas Del Rio Gold Mine",
+                "location": "North-central Honduras, indicated by a red marker and white arrow."
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageNumber": 4,
+      "title": "Basic Input Parameters",
+      "content": [
+        {
+          "type": "panel",
+          "title": "Block Model Parameters",
+          "parameters": [
+            {"parameter": "Origin X", "value": "332800"},
+            {"parameter": "Origin Y", "value": "1682000"},
+            {"parameter": "Origin Z", "value": "547"},
+            {"parameter": "Number of Columns", "value": "250"},
+            {"parameter": "Number of Rows", "value": "130"},
+            {"parameter": "Number of Levels", "value": "66"},
+            {"parameter": "Block Size Column", "value": "5"},
+            {"parameter": "Block Size Row", "value": "5"},
+            {"parameter": "Block Size Level", "value": "5 (Z irregularly spaced)"},
+            {"parameter": "Orientation Rotation", "value": "0"}
+          ],
+          "rockCodes": [
+            {"code": 0, "type": "Air"},
+            {"code": 10, "type": "Saprolite"},
+            {"code": 20, "type": "Oxide"},
+            {"code": 30, "type": "Transition"},
+            {"code": 40, "type": "Sulphide"},
+            {"code": 99, "type": "Waste"}
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Economic & Processing Parameters",
+          "parameters": [
+            {"parameter": "Au Price", "value": "US$1,850/oz"},
+            {"parameter": "Saprolite Recovery", "value": "78%"},
+            {"parameter": "Oxide Recovery", "value": "78%"},
+            {"parameter": "Transition Recovery", "value": "67%"},
+            {"parameter": "Sulphide Recovery", "value": "52%"},
+            {"parameter": "Saprolite Process Cost", "value": "$6.50/t"},
+            {"parameter": "Oxide Process Cost", "value": "$6.50/t"},
+            {"parameter": "Transition Process Cost", "value": "$9.00/t"},
+            {"parameter": "Sulphide Process Cost", "value": "$9.00/t"}
+          ]
+        }
+      ]
+    },
+    {
+      "pageNumber": 5,
+      "title": "Optimization Result: Pit Size Selection",
+      "content": [
+        {
+          "type": "table",
+          "title": "October 01, Vueltas Del Rio Resource Optimization Results",
+          "subtitle": "Au (g/t) COG: Sapprolite (RockType 10) and Oxides (RockType 20) = 0.18; Transition (RockType 30) = 0.28; Sulphide (RockType 40) = 0.36",
+          "columns": ["Phase (Pit #)", "Factor (%)", "Profit ($)", "Revenue ($)", "NPV (@ 5%) ($)", "Total Material (t)", "Total Waste (t)", "Strip Ratio", "Total Ore (t)", "Au (g/t)"],
+          "data": [
+            {"Phase (Pit #)": 1, "Factor (%)": 5.00, "Profit ($)": 45880876, "Revenue ($)": 47530974, "NPV (@ 5%) ($)": 45739468, "Total Material (t)": 202404, "Total Waste (t)": 71518, "Strip Ratio": 0.55, "Total Ore (t)": 130886, "Au (g/t)": 8.18},
+            {"Phase (Pit #)": 20, "Factor (%)": 100.00, "Profit ($)": 285726707, "Revenue ($)": 440396493, "NPV (@ 5%) ($)": 258231488, "Total Material (t)": 30721748, "Total Waste (t)": 22313837, "Strip Ratio": 2.65, "Total Ore (t)": 8407911, "Au (g/t)": 1.44}
+          ],
+          "highlight": {
+             "row": "Pit 20",
+             "note": "Used for schedule"
+          }
+        }
+      ]
+    },
+    {
+      "pageNumber": 6,
+      "title": "Pit Ore Tonnage by Ore Type",
+      "content": [
+        {
+          "type": "table",
+          "title": "IN PIT TONNAGE (Based on selected Pit 20)",
+          "columns": ["Ore Type", "Tonnes", "Grade (Au g/t)", "Gold Oz (Contained)", "Recovery (%)", "Rec Gold Oz (Recovered)"],
+          "data": [
+            {"Ore Type": "Saprolite (10)", "Tonnes": 277429, "Grade (Au g/t)": 1.39, "Gold Oz (Contained)": 12406, "Recovery (%)": 78.0, "Rec Gold Oz (Recovered)": 9677},
+            {"Ore Type": "Oxide (20)", "Tonnes": 2770588, "Grade (Au g/t)": 1.14, "Gold Oz (Contained)": 101483, "Recovery (%)": 78.0, "Rec Gold Oz (Recovered)": 79157},
+            {"Ore Type": "Transition (30)", "Tonnes": 835383, "Grade (Au g/t)": 1.31, "Gold Oz (Contained)": 35200, "Recovery (%)": 67.0, "Rec Gold Oz (Recovered)": 23584},
+            {"Ore Type": "Sulphide (40)", "Tonnes": 4448327, "Grade (Au g/t)": 1.64, "Gold Oz (Contained)": 235173, "Recovery (%)": 52.0, "Rec Gold Oz (Recovered)": 122290}
+          ],
+          "summary": [
+            {"Metric": "Total Ore (t)", "Value": 8331727, "Grade (Au g/t)": 1.43, "Gold Oz (Contained)": 384262, "Recovery (%)": 61.1, "Rec Gold Oz (Recovered)": 234707},
+            {"Metric": "Waste", "Value": 22545126},
+            {"Metric": "Total Material", "Value": 30876853},
+            {"Metric": "Strip Ratio", "Value": 2.71}
+          ]
+        }
+      ]
+    },
+    {
+      "pageNumber": 10,
+      "title": "Cashflow Model Production",
+      "content": [
+        {
+          "type": "table",
+          "title": "Annual Production Schedule",
+          "sections": [
+            {
+              "title": "MINE PRODUCTION (Open Pit)",
+              "columns": ["Item", "Units", "Totals", "-1", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+              "data": [
+                {"Item": "Waste Rock", "Units": "t", "Totals": 22545126, "1": 2703224, "2": 2596114, "3": 2902555, "4": 2938499, "5": 3368883, "6": 3389725, "7": 2892047, "8": 1754079},
+                {"Item": "Ore Mined", "Units": "t", "Totals": 8331727, "1": 1297009, "2": 1403722, "3": 1097707, "4": 1061445, "5": 630890, "6": 610243, "7": 1108115, "8": 1122596}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pageNumber": 13,
+      "title": "Economic Results",
+      "content": [
+        {
+          "type": "table",
+          "title": "Summary Economic Results",
+          "columns": ["Metric", "Discount Rate", "Pre-Tax ($)", "After-Tax ($)"],
+          "data": [
+            {"Metric": "NPV", "Discount Rate": "0%", "Pre-Tax ($)": 237548854, "After-Tax ($)": 176526120},
+            {"Metric": "NPV", "Discount Rate": "5%", "Pre-Tax ($)": 178627708, "After-Tax ($)": 131926508},
+            {"Metric": "NPV", "Discount Rate": "8%", "Pre-Tax ($)": 152094462, "After-Tax ($)": 111814491},
+            {"Metric": "NPV", "Discount Rate": "10%", "Pre-Tax ($)": 137163713, "After-Tax ($)": 100490594}
+          ],
+          "additional_metrics": [
+              {"Metric": "IRR", "Pre-Tax (%)": 138, "After-Tax (%)": 106},
+              {"Metric": "Payback period", "After-Tax (years)": 1.0}
+          ]
+        }
+      ]
+    },
+    {
+      "pageNumber": 14,
+      "title": "End",
+      "content": [
+        {
+          "type": "text",
+          "text": "End"
+        }
+      ]
+    }
+  ]
+}
