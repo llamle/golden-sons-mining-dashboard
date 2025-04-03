@@ -1,288 +1,315 @@
-const fs = require('fs').promises;
+const fs = require('fs');
 const path = require('path');
 const logger = require('../config/logger');
 
 /**
- * Read and parse a JSON file
- * @param {string} filename - The name of the file to read
- * @returns {Promise<Object>} - The parsed JSON data
+ * Reads and parses a JSON file from the data/provided directory
+ * @param {string} filename - The name of the JSON file
+ * @returns {Object} The parsed JSON data
  */
-async function readJsonFile(filename) {
+const readJsonFile = (filename) => {
   try {
     const filePath = path.join(__dirname, '../../../data/provided', filename);
-    const data = await fs.readFile(filePath, 'utf8');
-    return JSON.parse(data);
+    const fileContent = fs.readFileSync(filePath, 'utf8');
+    return JSON.parse(fileContent);
   } catch (error) {
-    logger.error(`Error reading file ${filename}: ${error.message}`);
-    throw new Error(`Failed to read or parse ${filename}`);
+    logger.error(`Error reading JSON file ${filename}:`, error);
+    throw new Error(`Failed to read data file: ${filename}`);
   }
-}
+};
 
 /**
- * Get the list of all available projects
- * @returns {Promise<Array>} - The list of available projects
+ * Lists all available projects
+ * @returns {Array} List of projects with basic information
  */
-async function listProjects() {
+const listProjects = () => {
   try {
+    // For now, we're focusing only on the Golden Sons project
+    const goldenSonsData = readJsonFile('golden-sons-complete-data-march.json');
     return [
       {
         id: 'golden-sons',
-        name: 'Golden Sons Mining - Minas y Cuevas Project',
-        description: 'Gold mining project with significant upside potential',
+        name: goldenSonsData.metaData?.projectName || 'Golden Sons Mining - Minas y Cuevas Project',
+        description: goldenSonsData.companyDocuments?.executiveSummary?.overview || 'Gold mining project with significant upside potential',
         location: 'Honduras, Central America',
-        mainDataFile: 'golden-sons-complete-data-march.json',
-        supportingFiles: [
-          'PE_Vueltas_Desktop_Study_Memo_Oct_17_2023.json',
-          'Vueltas_Del_Rio_Desktop_Study_Summary.json',
-          'Vueltas_Del_Rio_Main_Geological_Appraisal.json'
-        ]
+        dataDate: goldenSonsData.metaData?.dataPreparationDate || 'April 2025',
       }
     ];
   } catch (error) {
-    logger.error(`Error listing projects: ${error.message}`);
-    throw new Error('Failed to list projects');
+    logger.error('Error listing projects:', error);
+    throw error;
   }
-}
+};
 
 /**
- * Get key metrics for Golden Sons project
- * @returns {Promise<Object>} - Key metrics for the project
+ * Gets financial data for the Golden Sons project
+ * @returns {Object} Financial data including P&L, Balance Sheet, and Cash Flow
  */
-async function getGoldenSonsKeyMetrics() {
+const getGoldenSonsFinancials = () => {
   try {
-    const mainData = await readJsonFile('golden-sons-complete-data-march.json');
+    const goldenSonsData = readJsonFile('golden-sons-complete-data-march.json');
     
-    // Extract key metrics from the metadata
     return {
-      projectName: mainData.metaData.projectName,
-      dataPreparationDate: mainData.metaData.dataPreparationDate,
-      goldPriceAssumptions: {
-        executiveSummary: mainData.metaData.goldPriceAssumptions.executiveSummary,
-        financialProjection: mainData.metaData.goldPriceAssumptions.financialProjection,
-        proposal: mainData.metaData.goldPriceAssumptions.proposal
+      pnl: goldenSonsData.financialData?.['P&L'] || [],
+      balanceSheet: goldenSonsData.financialData?.['BS'] || [],
+      cashFlow: goldenSonsData.financialData?.['Cash Flow'] || []
+    };
+  } catch (error) {
+    logger.error('Error getting Golden Sons financials:', error);
+    throw error;
+  }
+};
+
+/**
+ * Gets key metrics and highlights for the Golden Sons project
+ * @returns {Object} Key metrics including NPV, IRR, payback period, etc.
+ */
+const getGoldenSonsKeyMetrics = () => {
+  try {
+    // Get data from multiple source files for comprehensive metrics
+    const goldenSonsData = readJsonFile('golden-sons-complete-data-march.json');
+    const peStudyData = readJsonFile('PE_Vueltas_Desktop_Study_Memo_Oct_17_2023.json');
+    const desktopStudyData = readJsonFile('Vueltas_Del_Rio_Desktop_Study_Summary.json');
+    
+    // Get recovery rates and other metrics
+    const recoveryRates = goldenSonsData.metaData?.recoveryRates || {
+      oxide: "78.0%",
+      transition: "67.0%",
+      sulfide: "52.0%"
+    };
+    
+    // Extract NPV and IRR from different sources to show different scenarios
+    const npvValues = {
+      // From the main Golden Sons data (current gold price assumption)
+      current: {
+        value: goldenSonsData.metaData?.keyEconomicMetrics?.npv5 || "$158M",
+        goldPrice: goldenSonsData.metaData?.goldPriceAssumptions?.financialProjection || "$3,100/oz", 
+        discountRate: "5%"
       },
-      recoveryRates: {
-        oxide: mainData.metaData.recoveryRates.oxide,
-        transition: mainData.metaData.recoveryRates.transition,
-        sulfide: mainData.metaData.recoveryRates.sulfide
+      // From PE Study (historical analysis)
+      peStudy: {
+        value: peStudyData.economic_cashflow_modelling?.tables?.find(t => t.table_number === 6)?.data?.find(d => d.Metric === "NPV (5%)")?.["After-Tax ($)"] || 131926508,
+        goldPrice: "$1,850/oz", // From PE study input params
+        discountRate: "5%"
+      }
+    };
+    
+    const irrValues = {
+      current: {
+        value: goldenSonsData.metaData?.keyEconomicMetrics?.postTaxIRR || "91%",
+        goldPrice: goldenSonsData.metaData?.goldPriceAssumptions?.financialProjection || "$3,100/oz"
       },
-      mineLifeProjection: mainData.metaData.mineLifeProjection,
-      totalRecoverableGold: mainData.metaData.totalRecoverableGold,
-      keyEconomicMetrics: {
-        postTaxIRR: mainData.metaData.keyEconomicMetrics.postTaxIRR,
-        npv5: mainData.metaData.keyEconomicMetrics.npv5,
-        paybackPeriod: mainData.metaData.keyEconomicMetrics.paybackPeriod
+      peStudy: {
+        value: peStudyData.economic_cashflow_modelling?.tables?.find(t => t.table_number === 6)?.irr_payback?.["IRR (After-Tax)"] || "106%",
+        goldPrice: "$1,850/oz"
+      }
+    };
+    
+    // Get resource estimates
+    const resourceEstimates = {
+      totalTonnes: 8331727, // from the financials
+      averageGrade: "1.43 g/t", // from the financials
+      totalRecoverableGold: goldenSonsData.metaData?.totalRecoverableGold || "234,709 oz",
+      recoveryRate: "61.1%" // weighted average recovery rate
+    };
+    
+    // Extract annual periods data
+    let periodsData = {};
+    const pnlData = goldenSonsData.financialData?.['P&L'] || [];
+    
+    // Find total line items for key metrics
+    const oreMined = pnlData.find(item => item.category === "Ore Mined");
+    const wasteRock = pnlData.find(item => item.category === "Waste Rock");
+    const totalOpenPitMined = pnlData.find(item => item.category === "Total Open Pit Mined");
+    const stripRatio = pnlData.find(item => item.category === "Strip Ratio (OP)");
+    const auGrade = pnlData.find(item => item.category === "Au grade" && item.unit === "g/t");
+    const totalRecoveredGold = pnlData.find(item => item.category === "Total Recovered Gold");
+    const revenue = pnlData.find(item => item.category === "Revenue (Gold Price as of 3/31/25)");
+    const totalOpex = pnlData.find(item => item.category === "Total Opex");
+    const grossProfit = pnlData.find(item => item.category === "Gross Profit");
+    const netIncomeAfterTax = pnlData.find(item => item.category === "Net Income After Tax");
+    
+    // Calculate average cost per ounce (simplified)
+    const totalOperatingCost = parseFloat(String(totalOpex?.total || "0").replace(/,/g, ""));
+    const totalGoldOunces = parseFloat(String(totalRecoveredGold?.total || "0").replace(/,/g, ""));
+    const averageCostPerOunce = totalGoldOunces > 0 ? totalOperatingCost / totalGoldOunces : 0;
+    
+    return {
+      projectName: goldenSonsData.metaData?.projectName || "Golden Sons Mining - Minas y Cuevas Project",
+      projectOverview: goldenSonsData.companyDocuments?.executiveSummary?.overview || "",
+      dataDate: goldenSonsData.metaData?.dataPreparationDate || "April 2025",
+      npv: npvValues,
+      irr: irrValues,
+      paybackPeriod: goldenSonsData.metaData?.keyEconomicMetrics?.paybackPeriod || "0.8 years",
+      mineLife: goldenSonsData.metaData?.mineLifeProjection || "8.5 years",
+      initialCapex: { 
+        value: "34,511,787", // from cashflow Capex
+        unit: "$"
       },
-      currentValuation: mainData.metaData.currentValuation,
-      projectedValuationAfterNI43101: mainData.metaData.projectedValuationAfterNI43101
+      resources: resourceEstimates,
+      production: {
+        totalOreMined: oreMined?.total || "8,331,727 t",
+        totalWasteRock: wasteRock?.total || "22,545,126 t",
+        totalMined: totalOpenPitMined?.total || "30,876,853 t",
+        averageStripRatio: stripRatio?.total || "2.7 w:o",
+        averageGrade: auGrade?.total || "1.43 g/t",
+        totalRecoveredGold: totalRecoveredGold?.total || "234,709 oz"
+      },
+      financialSummary: {
+        totalRevenue: revenue?.total || "727,596,440",
+        totalOpex: totalOpex?.total || "136,872,317",
+        grossProfit: grossProfit?.total || "590,724,123",
+        netIncomeAfterTax: netIncomeAfterTax?.total || "340,436,638",
+        averageCostPerOunce: averageCostPerOunce.toFixed(2),
+        goldPriceAssumption: goldenSonsData.metaData?.goldPriceAssumptions?.financialProjection || "$3,100/oz"
+      },
+      recoveryRates: recoveryRates
     };
   } catch (error) {
-    logger.error(`Error getting Golden Sons key metrics: ${error.message}`);
-    throw new Error('Failed to get Golden Sons key metrics');
+    logger.error('Error getting Golden Sons key metrics:', error);
+    throw error;
   }
-}
+};
 
 /**
- * Get P&L financials for Golden Sons project
- * @returns {Promise<Object>} - P&L data
+ * Gets production schedule data for the Golden Sons project
+ * @returns {Object} Production schedule by period
  */
-async function getGoldenSonsPnL() {
+const getGoldenSonsProductionSchedule = () => {
   try {
-    const mainData = await readJsonFile('golden-sons-complete-data-march.json');
+    const goldenSonsData = readJsonFile('golden-sons-complete-data-march.json');
     
-    // Return the full P&L data
-    return {
-      pnl: mainData.financialData.P&L,
-      // You can add additional processing or structure here if needed
-    };
-  } catch (error) {
-    logger.error(`Error getting Golden Sons P&L: ${error.message}`);
-    throw new Error('Failed to get Golden Sons P&L');
-  }
-}
-
-/**
- * Get balance sheet financials for Golden Sons project
- * @returns {Promise<Object>} - Balance sheet data
- */
-async function getGoldenSonsBalanceSheet() {
-  try {
-    const mainData = await readJsonFile('golden-sons-complete-data-march.json');
+    // Extract key production metrics from P&L data
+    const pnlData = goldenSonsData.financialData?.['P&L'] || [];
     
-    // Return the full balance sheet data
-    return {
-      balanceSheet: mainData.financialData.BS,
-      // You can add additional processing or structure here if needed
-    };
-  } catch (error) {
-    logger.error(`Error getting Golden Sons balance sheet: ${error.message}`);
-    throw new Error('Failed to get Golden Sons balance sheet');
-  }
-}
-
-/**
- * Get cash flow financials for Golden Sons project
- * @returns {Promise<Object>} - Cash flow data
- */
-async function getGoldenSonsCashFlow() {
-  try {
-    const mainData = await readJsonFile('golden-sons-complete-data-march.json');
+    // Identify and extract specific production metrics
+    const productionMetrics = [
+      "Waste Rock",
+      "Ore Mined",
+      "Au grade",
+      "Strip Ratio (OP)",
+      "Processing (Total)",
+      "Total Recovered Gold",
+      "Revenue (Gold Price as of 3/31/25)"
+    ];
     
-    // Return the full cash flow data
-    return {
-      cashFlow: mainData.financialData['Cash Flow'],
-      // You can add additional processing or structure here if needed
-    };
-  } catch (error) {
-    logger.error(`Error getting Golden Sons cash flow: ${error.message}`);
-    throw new Error('Failed to get Golden Sons cash flow');
-  }
-}
-
-/**
- * Get production schedule for Golden Sons project
- * @returns {Promise<Object>} - Production schedule data
- */
-async function getGoldenSonsProductionSchedule() {
-  try {
-    const mainData = await readJsonFile('golden-sons-complete-data-march.json');
+    const productionData = {};
     
-    // Extract production-related items from P&L
-    const productionData = mainData.financialData.P&L.filter(item => 
-      ['Waste Rock', 'Ore Mined', 'Au grade', 'Stockpile Rehandle', 
-       'Total Open Pit Mined', 'Strip Ratio (OP)', 'Processing (Total)', 
-       'Au grade', 'Total Recovered Gold'].includes(item.category)
-    );
+    // Extract the relevant metrics
+    productionMetrics.forEach(metric => {
+      const item = pnlData.find(item => item.category === metric);
+      if (item && item.periods) {
+        productionData[metric] = {
+          unit: item.unit,
+          total: item.total,
+          periods: item.periods
+        };
+      }
+    });
     
-    return {
-      production: productionData,
-      // You can add additional processing or structure here if needed
-    };
+    return productionData;
   } catch (error) {
-    logger.error(`Error getting Golden Sons production schedule: ${error.message}`);
-    throw new Error('Failed to get Golden Sons production schedule');
+    logger.error('Error getting Golden Sons production schedule:', error);
+    throw error;
   }
-}
+};
 
 /**
- * Get executive summary for Golden Sons project
- * @returns {Promise<Object>} - Executive summary data
+ * Gets detailed cash flow data for the Golden Sons project
+ * @returns {Object} Cash flow data by period
  */
-async function getGoldenSonsExecutiveSummary() {
+const getGoldenSonsCashFlow = () => {
   try {
-    const mainData = await readJsonFile('golden-sons-complete-data-march.json');
+    const goldenSonsData = readJsonFile('golden-sons-complete-data-march.json');
     
-    // Return the executive summary
-    return mainData.companyDocuments.executiveSummary;
-  } catch (error) {
-    logger.error(`Error getting Golden Sons executive summary: ${error.message}`);
-    throw new Error('Failed to get Golden Sons executive summary');
-  }
-}
-
-/**
- * Get proposal for Golden Sons project
- * @returns {Promise<Object>} - Proposal data
- */
-async function getGoldenSonsProposal() {
-  try {
-    const mainData = await readJsonFile('golden-sons-complete-data-march.json');
+    // Extract cash flow data
+    const cashFlowData = goldenSonsData.financialData?.['Cash Flow'] || [];
     
-    // Return the proposal
-    return mainData.companyDocuments.proposal;
+    // Identify key cash flow metrics
+    const cashFlowMetrics = [
+      "Revenue",
+      "(-) Operating Cost",
+      "(-) Capex",
+      "(-) Reclamation",
+      "Cashflow (pre-tax)",
+      "Cumulative Cashflow (pre-tax)",
+      "(-) Income Taxes",
+      "Cashflow (after-tax)"
+    ];
+    
+    const formattedCashFlow = {};
+    
+    // Extract the relevant metrics
+    cashFlowMetrics.forEach(metric => {
+      const item = cashFlowData.find(item => item.category === metric);
+      if (item) {
+        formattedCashFlow[metric] = {
+          unit: item.unit,
+          total: item.total,
+          periods: item.periods
+        };
+      }
+    });
+    
+    return formattedCashFlow;
   } catch (error) {
-    logger.error(`Error getting Golden Sons proposal: ${error.message}`);
-    throw new Error('Failed to get Golden Sons proposal');
+    logger.error('Error getting Golden Sons cash flow:', error);
+    throw error;
   }
-}
+};
 
 /**
- * Get desktop study memo for Golden Sons project
- * @returns {Promise<Object>} - Desktop study memo data
+ * Gets project summary for the Golden Sons project
+ * @returns {Object} Project summary information
  */
-async function getGoldenSonsDesktopStudyMemo() {
+const getProjectSummary = (projectId) => {
   try {
-    return await readJsonFile('PE_Vueltas_Desktop_Study_Memo_Oct_17_2023.json');
-  } catch (error) {
-    logger.error(`Error getting Golden Sons desktop study memo: ${error.message}`);
-    throw new Error('Failed to get Golden Sons desktop study memo');
-  }
-}
-
-/**
- * Get geological appraisal for Golden Sons project
- * @returns {Promise<Object>} - Geological appraisal data
- */
-async function getGoldenSonsGeologicalAppraisal() {
-  try {
-    return await readJsonFile('Vueltas_Del_Rio_Main_Geological_Appraisal.json');
-  } catch (error) {
-    logger.error(`Error getting Golden Sons geological appraisal: ${error.message}`);
-    throw new Error('Failed to get Golden Sons geological appraisal');
-  }
-}
-
-/**
- * Get all financials for a project
- * @param {string} projectId - The ID of the project
- * @returns {Promise<Object>} - All financial data for the project
- */
-async function getProjectFinancials(projectId) {
-  if (projectId === 'golden-sons') {
-    try {
-      const pnl = await getGoldenSonsPnL();
-      const balanceSheet = await getGoldenSonsBalanceSheet();
-      const cashFlow = await getGoldenSonsCashFlow();
-      
-      return {
-        pnl: pnl.pnl,
-        balanceSheet: balanceSheet.balanceSheet,
-        cashFlow: cashFlow.cashFlow
-      };
-    } catch (error) {
-      logger.error(`Error getting Golden Sons financials: ${error.message}`);
-      throw new Error('Failed to get Golden Sons financials');
+    if (projectId !== 'golden-sons') {
+      throw new Error(`Project ${projectId} not found`);
     }
-  } else {
-    throw new Error(`Project ${projectId} not found`);
+    
+    const goldenSonsData = readJsonFile('golden-sons-complete-data-march.json');
+    
+    return {
+      id: 'golden-sons',
+      name: goldenSonsData.metaData?.projectName || 'Golden Sons Mining - Minas y Cuevas Project',
+      overview: goldenSonsData.companyDocuments?.executiveSummary?.overview || '',
+      highlights: goldenSonsData.companyDocuments?.executiveSummary?.keyProjectHighlights || {},
+      investmentStructure: goldenSonsData.companyDocuments?.executiveSummary?.proposedInvestmentStructure || {},
+      nextSteps: goldenSonsData.companyDocuments?.executiveSummary?.nextSteps || '',
+      conclusion: goldenSonsData.companyDocuments?.executiveSummary?.conclusion || ''
+    };
+  } catch (error) {
+    logger.error(`Error getting summary for project ${projectId}:`, error);
+    throw error;
   }
-}
+};
 
 /**
- * Get summary for a project
- * @param {string} projectId - The ID of the project
- * @returns {Promise<Object>} - Summary data for the project
+ * Gets data from geology study for Golden Sons project
+ * @returns {Object} Geology study data
  */
-async function getProjectSummary(projectId) {
-  if (projectId === 'golden-sons') {
-    try {
-      const keyMetrics = await getGoldenSonsKeyMetrics();
-      const executiveSummary = await getGoldenSonsExecutiveSummary();
-      
-      return {
-        keyMetrics,
-        executiveSummary
-      };
-    } catch (error) {
-      logger.error(`Error getting Golden Sons summary: ${error.message}`);
-      throw new Error('Failed to get Golden Sons summary');
-    }
-  } else {
-    throw new Error(`Project ${projectId} not found`);
+const getGoldenSonsGeologyData = () => {
+  try {
+    const geologyData = readJsonFile('Vueltas_Del_Rio_Main_Geological_Appraisal.json');
+    
+    return {
+      executiveSummary: geologyData.report?.executive_summary || {},
+      resourceEstimate: geologyData.report?.sections?.find(s => s.title.includes("ECONOMIC GEOLOGY"))?.subsection || {},
+      conclusions: geologyData.report?.sections?.find(s => s.title.includes("CONCLUSIONS"))?.conclusions || ''
+    };
+  } catch (error) {
+    logger.error('Error getting Golden Sons geology data:', error);
+    throw error;
   }
-}
+};
 
 module.exports = {
   listProjects,
   getProjectSummary,
-  getProjectFinancials,
+  getGoldenSonsFinancials,
   getGoldenSonsKeyMetrics,
-  getGoldenSonsPnL,
-  getGoldenSonsBalanceSheet,
-  getGoldenSonsCashFlow,
   getGoldenSonsProductionSchedule,
-  getGoldenSonsExecutiveSummary,
-  getGoldenSonsProposal,
-  getGoldenSonsDesktopStudyMemo,
-  getGoldenSonsGeologicalAppraisal
+  getGoldenSonsCashFlow,
+  getGoldenSonsGeologyData
 };
