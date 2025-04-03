@@ -4,6 +4,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const path = require('path');
+const logger = require('./config/logger');
 
 // Initialize Express
 const app = express();
@@ -24,6 +25,7 @@ app.use(express.urlencoded({ extended: true })); // Parse URL-encoded request bo
 
 // Root route - basic health check
 app.get('/', (req, res) => {
+  logger.info('Health check endpoint accessed');
   res.json({ message: 'Golden Sons Mining Dashboard API is running!' });
 });
 
@@ -33,18 +35,24 @@ app.get('/', (req, res) => {
 
 // 404 handler
 app.use((req, res, next) => {
+  logger.warn(`Route not found: ${req.method} ${req.originalUrl}`);
   res.status(404).json({ error: 'Not Found' });
 });
 
 // Error handler
 app.use((err, req, res, next) => {
-  console.error(err.stack);
+  logger.error(`Error processing request: ${err.message}`, { 
+    error: err.stack,
+    path: req.path,
+    method: req.method 
+  });
   res.status(500).json({ error: 'Internal Server Error' });
 });
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  logger.info(`Server running on port ${PORT}`);
+  logger.info(`Environment: ${process.env.NODE_ENV || 'development'}`);
 });
 
 module.exports = app; // Export for testing
