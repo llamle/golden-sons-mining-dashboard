@@ -1,0 +1,32 @@
+{
+  "name": "golden-sons-mining-dashboard-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Golden Sons Mining Dashboard",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "mining",
+    "dashboard",
+    "api",
+    "express"
+  ],
+  "author": "Golden Sons Mining",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "winston": "^3.12.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.0",
+    "supertest": "^6.3.4"
+  }
+}
