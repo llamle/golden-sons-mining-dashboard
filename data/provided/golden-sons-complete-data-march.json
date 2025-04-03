@@ -1,0 +1,1173 @@
+{
+  "financialData": {
+    "P&L": [
+    {
+      "category": "MINE PRODUCTION",
+      "type": "header"
+    },
+    {
+      "category": "Waste Rock",
+      "unit": "t",
+      "total": "22,545,126",
+      "periods": {
+        "1": "2,703,224",
+        "2": "2,596,114",
+        "3": "2,902,555",
+        "4": "2,938,499",
+        "5": "3,368,883",
+        "6": "3,389,725",
+        "7": "2,892,047",
+        "8": "1,754,079"
+      }
+    },
+    {
+      "category": "Ore Mined",
+      "unit": "t",
+      "total": "8,331,727",
+      "periods": {
+        "1": "1,297,009",
+        "2": "1,403,722",
+        "3": "1,097,707",
+        "4": "1,061,445",
+        "5": "630,890",
+        "6": "610,243",
+        "7": "1,108,115",
+        "8": "1,122,596"
+      }
+    },
+    {
+      "category": "Au grade",
+      "unit": "g/t",
+      "total": "1.43",
+      "periods": {
+        "1": "1.08",
+        "2": "1.22",
+        "3": "1.34",
+        "4": "1.83",
+        "5": "1.71",
+        "6": "1.19",
+        "7": "1.71",
+        "8": "1.54"
+      }
+    },
+    {
+      "category": "Stockpile Rehandle",
+      "unit": "t",
+      "total": "1,434,747",
+      "periods": {
+        "2": "36,307.00",
+        "5": "568,575.00",
+        "6": "389,755.00",
+        "8": "108,180.00",
+        "9": "331,930.00"
+      }
+    },
+    {
+      "category": "Total Open Pit Mined",
+      "unit": "t",
+      "total": "30,876,853",
+      "periods": {
+        "1": "4,000,233",
+        "2": "3,999,836",
+        "3": "4,000,262",
+        "4": "3,999,944",
+        "5": "3,999,773",
+        "6": "3,999,968",
+        "7": "4,000,162",
+        "8": "2,876,675"
+      }
+    },
+    {
+      "category": "Strip Ratio (OP)",
+      "unit": "w:o",
+      "total": "2.7",
+      "periods": {
+        "1": "2.1",
+        "2": "1.8",
+        "3": "2.6",
+        "4": "2.8",
+        "5": "5.3",
+        "6": "5.6",
+        "7": "2.6",
+        "8": "1.6"
+      }
+    },
+    {
+      "category": "PROCESSING",
+      "type": "header"
+    },
+    {
+      "category": "Processing (Oxide)",
+      "unit": "t",
+      "total": "3,048,017",
+      "periods": {
+        "1": "998,056",
+        "2": "807,215",
+        "3": "310,836",
+        "4": "43,186",
+        "5": "5,001",
+        "6": "418,565",
+        "7": "357,766",
+        "8": "2,900",
+        "9": "104,492"
+      }
+    },
+    {
+      "category": "Au grade",
+      "unit": "g/t",
+      "total": "1.16",
+      "periods": {
+        "1": "1.13",
+        "2": "1.20",
+        "3": "1.07",
+        "4": "2.58",
+        "5": "0.77",
+        "6": "0.88",
+        "7": "1.56",
+        "8": "3.48",
+        "9": "0.57"
+      }
+    },
+    {
+      "category": "Processing (Transition)",
+      "unit": "t",
+      "total": "835,384",
+      "periods": {
+        "1": "1,501",
+        "2": "178,899",
+        "3": "91,606",
+        "4": "47,944",
+        "6": "182,960",
+        "7": "97,234",
+        "8": "235,240"
+      }
+    },
+    {
+      "category": "Au grade",
+      "unit": "g/t",
+      "total": "1.31",
+      "periods": {
+        "1": "12.51",
+        "2": "1.08",
+        "3": "0.98",
+        "4": "1.97",
+        "6": "0.77",
+        "7": "2.10",
+        "8": "1.50"
+      }
+    },
+    {
+      "category": "Processing (Sulphide)",
+      "unit": "t",
+      "total": "4,448,326",
+      "periods": {
+        "1": "368",
+        "2": "13,894",
+        "3": "597,555",
+        "4": "908,779",
+        "5": "994,999",
+        "6": "398,475",
+        "7": "544,933",
+        "8": "761,884",
+        "9": "227,439"
+      }
+    },
+    {
+      "category": "Au grade",
+      "unit": "g/t",
+      "total": "1.64",
+      "periods": {
+        "1": "9.08",
+        "2": "11.12",
+        "3": "1.57",
+        "4": "1.81",
+        "5": "1.54",
+        "6": "1.35",
+        "7": "1.88",
+        "8": "1.53",
+        "9": "1.36"
+      }
+    },
+    {
+      "category": "Processing (Total)",
+      "unit": "t",
+      "total": "8,331,727",
+      "periods": {
+        "1": "999,925",
+        "2": "1,000,008",
+        "3": "999,997",
+        "4": "999,909",
+        "5": "1,000,000",
+        "6": "1,000,000",
+        "7": "999,933",
+        "8": "1,000,024",
+        "9": "331,931"
+      }
+    },
+    {
+      "category": "Au grade",
+      "unit": "g/t",
+      "total": "1.43",
+      "periods": {
+        "1": "1.15",
+        "2": "1.32",
+        "3": "1.36",
+        "4": "1.85",
+        "5": "1.53",
+        "6": "1.05",
+        "7": "1.79",
+        "8": "1.53",
+        "9": "1.11"
+      }
+    },
+    {
+      "category": "Contained Gold",
+      "unit": "oz",
+      "total": "384,263",
+      "periods": {
+        "1": "36,944",
+        "2": "42,431",
+        "3": "43,809",
+        "4": "59,584",
+        "5": "49,317",
+        "6": "33,650",
+        "7": "57,390",
+        "8": "49,242",
+        "9": "11,896"
+      }
+    },
+    {
+      "category": "OX Leach Recovery",
+      "unit": "oz",
+      "input": "78.0%",
+      "total": "88,835",
+      "periods": {
+        "1": "28,261",
+        "2": "24,387",
+        "3": "8,334",
+        "4": "2,790",
+        "5": "97",
+        "6": "9,260",
+        "7": "13,964",
+        "8": "253",
+        "9": "1,490"
+      }
+    },
+    {
+      "category": "TR Leach Recovery",
+      "unit": "oz",
+      "input": "67.0%",
+      "total": "23,584",
+      "periods": {
+        "1": "405",
+        "2": "4,153",
+        "3": "1,941",
+        "4": "2,038",
+        "6": "3,039",
+        "7": "4,406",
+        "8": "7,601"
+      }
+    },
+    {
+      "category": "SU Leach Recovery",
+      "unit": "oz",
+      "input": "52.0%",
+      "total": "122,289",
+      "periods": {
+        "1": "56",
+        "2": "2,583",
+        "3": "15,718",
+        "4": "27,542",
+        "5": "25,581",
+        "6": "8,966",
+        "7": "17,114",
+        "8": "19,538",
+        "9": "5,192"
+      }
+    },
+    {
+      "category": "Total Recovered Gold",
+      "unit": "oz",
+      "input": "61.1%",
+      "total": "234,709",
+      "periods": {
+        "1": "28,722",
+        "2": "31,123",
+        "3": "25,993",
+        "4": "32,370",
+        "5": "25,677",
+        "6": "21,265",
+        "7": "35,484",
+        "8": "27,392",
+        "9": "6,683"
+      }
+    },
+    {
+      "category": "REVENUE",
+      "type": "header"
+    },
+    {
+      "category": "Exchange Rate",
+      "unit": "$US:CAD",
+      "input": "$1.00"
+    },
+    {
+      "category": "Au production",
+      "unit": "oz",
+      "total": "234,709",
+      "periods": {
+        "1": "28,722",
+        "2": "31,123",
+        "3": "25,993",
+        "4": "32,370",
+        "5": "25,677",
+        "6": "21,265",
+        "7": "35,484",
+        "8": "27,392",
+        "9": "6,683"
+      }
+    },
+    {
+      "category": "Gold Payable %",
+      "unit": "%",
+      "input": "99.0%"
+    },
+    {
+      "category": "Revenue (Gold Price as of 3/31/25)",
+      "unit": "USD",
+      "input": "$3,100",
+      "total": "727,596,440",
+      "periods": {
+        "1": "89,037,148",
+        "2": "96,480,975",
+        "3": "80,578,126",
+        "4": "100,346,503",
+        "5": "79,599,632",
+        "6": "65,922,466",
+        "7": "109,999,201",
+        "8": "84,915,242",
+        "9": "20,717,147"
+      }
+    },
+    {
+      "category": "Unit revenue",
+      "unit": "$/t",
+      "total": "87.33",
+      "periods": {
+        "1": "89.04",
+        "2": "96.48",
+        "3": "80.58",
+        "4": "100.36",
+        "5": "79.60",
+        "6": "65.92",
+        "7": "110.01",
+        "8": "84.91",
+        "9": "62.41"
+      }
+    },
+    {
+      "category": "COGS",
+      "type": "header"
+    },
+    {
+      "category": "Open Pit Waste Cost",
+      "unit": "$",
+      "input": "$2.00",
+      "total": "45,090,252",
+      "periods": {
+        "1": "5,406,448",
+        "2": "5,192,228",
+        "3": "5,805,110",
+        "4": "5,876,998",
+        "5": "6,737,766",
+        "6": "6,779,450",
+        "7": "5,784,094",
+        "8": "3,508,158"
+      }
+    },
+    {
+      "category": "Open Pit Waste Ore Cost",
+      "unit": "$",
+      "input": "$2.50",
+      "total": "20,829,318",
+      "periods": {
+        "1": "3,242,523",
+        "2": "3,509,305",
+        "3": "2,744,268",
+        "4": "2,653,613",
+        "5": "1,577,225",
+        "6": "1,525,608",
+        "7": "2,770,288",
+        "8": "2,806,490"
+      }
+    },
+    {
+      "category": "Stockpile Rehnadle cost",
+      "unit": "$",
+      "input": "$1.00",
+      "total": "1,434,747",
+      "periods": {
+        "2": "36,307",
+        "5": "568,575",
+        "6": "389,755",
+        "8": "108,180",
+        "9": "331,930"
+      }
+    },
+    {
+      "category": "OX Processing Cost",
+      "unit": "$",
+      "input": "$6.50",
+      "total": "19,812,111",
+      "periods": {
+        "1": "6,487,364",
+        "2": "5,246,898",
+        "3": "2,020,434",
+        "4": "280,709",
+        "5": "32,507",
+        "6": "2,720,673",
+        "7": "2,325,479",
+        "8": "18,850",
+        "9": "679,198"
+      }
+    },
+    {
+      "category": "TR Processing Cost",
+      "unit": "$",
+      "input": "$9.00",
+      "total": "7,518,456",
+      "periods": {
+        "1": "13,509",
+        "2": "1,610,091",
+        "3": "824,454",
+        "4": "431,496",
+        "6": "1,646,640",
+        "7": "875,106",
+        "8": "2,117,160"
+      }
+    },
+    {
+      "category": "SU Processing Cost",
+      "unit": "$",
+      "input": "$9.00",
+      "total": "40,034,934",
+      "periods": {
+        "1": "3,312",
+        "2": "125,046",
+        "3": "5,377,995",
+        "4": "8,179,011",
+        "5": "8,954,991",
+        "6": "3,586,275",
+        "7": "4,904,397",
+        "8": "6,856,956",
+        "9": "2,046,951"
+      }
+    },
+    {
+      "category": "Waste Management",
+      "unit": "$",
+      "total": "280,000",
+      "periods": {
+        "0": "100,000",
+        "1": "20,000",
+        "2": "20,000",
+        "3": "20,000",
+        "4": "20,000",
+        "5": "20,000",
+        "6": "20,000",
+        "7": "20,000",
+        "8": "20,000",
+        "9": "20,000"
+      }
+    },
+    {
+      "category": "Environmental",
+      "unit": "$",
+      "total": "420,000",
+      "periods": {
+        "0": "150,000",
+        "1": "30,000",
+        "2": "30,000",
+        "3": "30,000",
+        "4": "30,000",
+        "5": "30,000",
+        "6": "30,000",
+        "7": "30,000",
+        "8": "30,000",
+        "9": "30,000"
+      }
+    },
+    {
+      "category": "43-101 - Mineral Resource Estimate",
+      "unit": "$",
+      "total": "90,000",
+      "periods": {
+        "0": "90,000"
+      }
+    },
+    {
+      "category": "43-101 - Preliminary Economic Assessment",
+      "unit": "$",
+      "total": "112,500",
+      "periods": {
+        "0": "112,500"
+      }
+    },
+    {
+      "category": "43-101 - Pre-Feasibility Study",
+      "unit": "$",
+      "total": "650,000",
+      "periods": {
+        "0": "650,000"
+      }
+    },
+    {
+      "category": "43-101 - Geotechnical & Hydrology Drilling",
+      "unit": "$",
+      "total": "250,000",
+      "periods": {
+        "0": "250,000"
+      }
+    },
+    {
+      "category": "Metallurgical Testing",
+      "unit": "$",
+      "total": "100,000",
+      "periods": {
+        "0": "100,000"
+      }
+    },
+    {
+      "category": "Topographical",
+      "unit": "$",
+      "total": "250,000",
+      "periods": {
+        "0": "25,000",
+        "1": "25,000",
+        "2": "25,000",
+        "3": "25,000",
+        "4": "25,000",
+        "5": "25,000",
+        "6": "25,000",
+        "7": "25,000",
+        "8": "25,000",
+        "9": "25,000"
+      }
+    },
+    {
+      "category": "Total Opex",
+      "unit": "$",
+      "total": "136,872,317",
+      "periods": {
+        "0": "1,477,500",
+        "1": "15,228,156",
+        "2": "15,794,875",
+        "3": "16,847,261",
+        "4": "17,496,827",
+        "5": "17,946,064",
+        "6": "16,723,400",
+        "7": "16,734,364",
+        "8": "15,490,794",
+        "9": "3,133,079"
+      }
+    },
+    {
+      "category": "Total Unit Cost",
+      "unit": "$/t ore",
+      "total": "16.43",
+      "periods": {
+        "0": "0.00",
+        "1": "15.23",
+        "2": "15.79",
+        "3": "16.85",
+        "4": "17.50",
+        "5": "17.95",
+        "6": "16.72",
+        "7": "16.74",
+        "8": "15.49",
+        "9": "9.44"
+      }
+    },
+    {
+      "category": "Gross Profit",
+      "unit": "$",
+      "total": "590,724,123",
+      "periods": {
+        "0": "(1,477,500)",
+        "1": "73,808,992",
+        "2": "80,686,100",
+        "3": "63,730,866",
+        "4": "82,849,676",
+        "5": "61,653,569",
+        "6": "49,199,066",
+        "7": "93,264,838",
+        "8": "69,424,448",
+        "9": "17,584,068"
+      }
+    },
+    {
+      "category": "OPERATING EXPENSES",
+      "type": "header"
+    },
+    {
+      "category": "Security",
+      "unit": "$",
+      "total": "2,750,000",
+      "periods": {
+        "0": "500,000",
+        "1": "250,000",
+        "2": "250,000",
+        "3": "250,000",
+        "4": "250,000",
+        "5": "250,000",
+        "6": "250,000",
+        "7": "250,000",
+        "8": "250,000",
+        "9": "250,000"
+      }
+    },
+    {
+      "category": "Staff",
+      "unit": "$",
+      "total": "41,881,500",
+      "periods": {
+        "0": "1,881,500",
+        "1": "2,500,000",
+        "2": "5,000,000",
+        "3": "5,000,000",
+        "4": "5,000,000",
+        "5": "5,000,000",
+        "6": "5,000,000",
+        "7": "5,000,000",
+        "8": "5,000,000",
+        "9": "2,500,000"
+      }
+    },
+    {
+      "category": "Road Maintenance",
+      "unit": "$",
+      "total": "2,260,000",
+      "periods": {
+        "0": "1,240,000",
+        "1": "260,000",
+        "2": "100,000",
+        "3": "100,000",
+        "4": "100,000",
+        "5": "100,000",
+        "6": "100,000",
+        "7": "100,000",
+        "8": "100,000",
+        "9": "60,000"
+      }
+    },
+    {
+      "category": "Land Lease - Purchase Price",
+      "unit": "$",
+      "total": "11,250,000",
+      "periods": {
+        "0": "11,250,000"
+      }
+    },
+    {
+      "category": "Freight",
+      "unit": "$",
+      "total": "2,430,000",
+      "periods": {
+        "1": "270,000",
+        "2": "270,000",
+        "3": "270,000",
+        "4": "270,000",
+        "5": "270,000",
+        "6": "270,000",
+        "7": "270,000",
+        "8": "270,000",
+        "9": "270,000"
+      }
+    },
+    {
+      "category": "Office Expenses",
+      "unit": "$",
+      "total": "540,000",
+      "periods": {
+        "1": "60,000",
+        "2": "60,000",
+        "3": "60,000",
+        "4": "60,000",
+        "5": "60,000",
+        "6": "60,000",
+        "7": "60,000",
+        "8": "60,000",
+        "9": "60,000"
+      }
+    },
+    {
+      "category": "Total Operating Expenses",
+      "unit": "$",
+      "total": "129,961,251",
+      "periods": {
+        "0": "15,226,500",
+        "1": "11,529,600",
+        "2": "14,390,668",
+        "3": "13,277,469",
+        "4": "14,661,255",
+        "5": "13,208,974",
+        "6": "12,251,573",
+        "7": "15,336,944",
+        "8": "13,581,067",
+        "9": "6,497,200"
+      }
+    },
+    {
+      "category": "Net Income",
+      "unit": "$",
+      "total": "460,762,873",
+      "periods": {
+        "0": "(16,704,000)",
+        "1": "62,279,392",
+        "2": "66,295,432",
+        "3": "50,453,397",
+        "4": "68,188,421",
+        "5": "48,444,595",
+        "6": "36,947,493",
+        "7": "77,927,894",
+        "8": "55,843,381",
+        "9": "11,086,868"
+      }
+    },
+    {
+      "category": "DEPRECIATION & TAX",
+      "type": "header"
+    },
+    {
+      "category": "Actual Depreciation",
+      "unit": "$",
+      "total": "31,041,075",
+      "periods": {
+        "1": "0",
+        "2": "9,882,000",
+        "3": "6,917,400",
+        "4": "4,842,180",
+        "5": "3,389,526",
+        "6": "2,372,668",
+        "7": "1,660,868",
+        "8": "1,162,607",
+        "9": "813,825"
+      }
+    },
+    {
+      "category": "Taxable Income",
+      "unit": "$",
+      "total": "429,721,798",
+      "periods": {
+        "0": "(16,704,000)",
+        "1": "62,279,392",
+        "2": "56,413,432",
+        "3": "43,535,997",
+        "4": "63,346,241",
+        "5": "45,055,069",
+        "6": "34,574,825",
+        "7": "76,267,026",
+        "8": "54,680,773",
+        "9": "10,273,043"
+      }
+    },
+    {
+      "category": "Income Tax",
+      "unit": "$",
+      "input": "20.00%",
+      "total": "89,285,160",
+      "periods": {
+        "1": "12,455,878",
+        "2": "11,282,686",
+        "3": "8,707,199",
+        "4": "12,669,248",
+        "5": "9,011,014",
+        "6": "6,914,965",
+        "7": "15,253,405",
+        "8": "10,936,155",
+        "9": "2,054,609"
+      }
+    },
+    {
+      "category": "Net Income After Tax",
+      "unit": "$",
+      "total": "340,436,638",
+      "periods": {
+        "0": "(16,704,000)",
+        "1": "49,823,513",
+        "2": "45,130,746",
+        "3": "34,828,797",
+        "4": "50,676,993",
+        "5": "36,044,055",
+        "6": "27,659,860",
+        "7": "61,013,621",
+        "8": "43,744,619",
+        "9": "8,218,434"
+      }
+    }
+  ],
+  "BS": [
+    {
+      "category": "CURRENT ASSETS",
+      "type": "header"
+    },
+    {
+      "category": "Cash",
+      "unit": "$",
+      "periods": {
+        "0": "1,921,000",
+        "1": "63,478,605",
+        "2": "125,399,037",
+        "3": "171,477,434",
+        "4": "235,290,855",
+        "5": "279,360,449",
+        "6": "311,932,943",
+        "7": "385,485,837",
+        "8": "436,954,217",
+        "9": "443,666,086"
+      }
+    },
+    {
+      "category": "FIXED ASSETS",
+      "type": "header"
+    },
+    {
+      "category": "Leach Pad",
+      "unit": "$",
+      "total": "7,000,000",
+      "periods": {
+        "1": "7,000,000"
+      }
+    },
+    {
+      "category": "Crusher",
+      "unit": "$",
+      "total": "5,000,000",
+      "periods": {
+        "1": "5,000,000"
+      }
+    },
+    {
+      "category": "Total Assets",
+      "unit": "$",
+      "periods": {
+        "0": "3,296,000",
+        "1": "97,990,392",
+        "2": "159,910,824",
+        "3": "205,989,221",
+        "4": "269,802,642",
+        "5": "313,872,236",
+        "6": "346,444,730",
+        "7": "419,997,624",
+        "8": "471,466,004",
+        "9": "478,177,873"
+      }
+    },
+    {
+      "category": "LIABILITIES & EQUITY",
+      "type": "header"
+    },
+    {
+      "category": "N/P - Equipment Loan",
+      "unit": "$",
+      "periods": {
+        "1": "35,000,000",
+        "2": "30,625,000",
+        "3": "26,250,000",
+        "4": "21,875,000",
+        "5": "17,500,000",
+        "6": "13,125,000",
+        "7": "8,750,000",
+        "8": "4,375,000",
+        "9": "0"
+      }
+    },
+    {
+      "category": "N/P - Recoup Due Diligence",
+      "unit": "$",
+      "periods": {
+        "0": "2,585,000"
+      }
+    },
+    {
+      "category": "Owners Equity",
+      "unit": "$",
+      "periods": {
+        "0": "17,415,000",
+        "1": "711,000",
+        "2": "62,990,392",
+        "3": "129,285,824",
+        "4": "179,739,221",
+        "5": "247,927,642",
+        "6": "296,372,236",
+        "7": "333,319,730",
+        "8": "411,247,624",
+        "9": "467,091,004"
+      }
+    },
+    {
+      "category": "Net Income",
+      "unit": "$",
+      "periods": {
+        "0": "(16,704,000)",
+        "1": "62,279,392",
+        "2": "66,295,432",
+        "3": "50,453,397",
+        "4": "68,188,421",
+        "5": "48,444,595",
+        "6": "36,947,493",
+        "7": "77,927,894",
+        "8": "55,843,381",
+        "9": "11,086,868"
+      }
+    },
+    {
+      "category": "Total Liabilites & Equity",
+      "unit": "$",
+      "periods": {
+        "0": "3,296,000",
+        "1": "97,990,392",
+        "2": "159,910,824",
+        "3": "205,989,221",
+        "4": "269,802,642",
+        "5": "313,872,236",
+        "6": "346,444,730",
+        "7": "419,997,624",
+        "8": "471,466,004",
+        "9": "478,177,873"
+      }
+    }
+  ],
+  "Cash Flow": [
+    {
+      "category": "NET CASHFLOW",
+      "type": "header"
+    },
+    {
+      "category": "Revenue",
+      "unit": "$",
+      "total": "727,596,440",
+      "periods": {
+        "1": "89,037,148",
+        "2": "96,480,975",
+        "3": "80,578,126",
+        "4": "100,346,503",
+        "5": "79,599,632",
+        "6": "65,922,466",
+        "7": "109,999,201",
+        "8": "84,915,242",
+        "9": "20,717,147"
+      }
+    },
+    {
+      "category": "(-) Operating Cost",
+      "unit": "$",
+      "total": "(266,833,568)",
+      "periods": {
+        "0": "(16,704,000)",
+        "1": "(26,757,756)",
+        "2": "(30,185,543)",
+        "3": "(30,124,729)",
+        "4": "(32,158,082)",
+        "5": "(31,155,038)",
+        "6": "(28,974,973)",
+        "7": "(32,071,308)",
+        "8": "(29,071,861)",
+        "9": "(9,630,279)"
+      }
+    },
+    {
+      "category": "(-) Capex",
+      "unit": "$",
+      "total": "(34,511,787)",
+      "periods": {
+        "0": "(1,375,000)",
+        "1": "(33,136,787)"
+      }
+    },
+    {
+      "category": "(-) Reclamation",
+      "unit": "$",
+      "input": "$5,000,000",
+      "total": "(5,000,000)",
+      "periods": {
+        "10": "(5,000,000)"
+      }
+    },
+    {
+      "category": "Cashflow (pre-tax)",
+      "unit": "$",
+      "total": "421,251,086",
+      "periods": {
+        "0": "(18,079,000)",
+        "1": "29,142,605",
+        "2": "66,295,432",
+        "3": "50,453,397",
+        "4": "68,188,421",
+        "5": "48,444,595",
+        "6": "36,947,493",
+        "7": "77,927,894",
+        "8": "55,843,381",
+        "9": "11,086,868",
+        "10": "(5,000,000)"
+      }
+    },
+    {
+      "category": "Cumulative Cashflow (pre-tax)",
+      "unit": "$",
+      "periods": {
+        "0": "(18,079,000)",
+        "1": "11,063,605",
+        "2": "77,359,037",
+        "3": "127,812,434",
+        "4": "196,000,855",
+        "5": "244,445,449",
+        "6": "281,392,943",
+        "7": "359,320,837",
+        "8": "415,164,217",
+        "9": "426,251,086",
+        "10": "421,251,086"
+      }
+    },
+    {
+      "category": "(-) Income Taxes",
+      "unit": "$",
+      "total": "(89,285,160)",
+      "periods": {
+        "1": "(12,455,878)",
+        "2": "(11,282,686)",
+        "3": "(8,707,199)",
+        "4": "(12,669,248)",
+        "5": "(9,011,014)",
+        "6": "(6,914,965)",
+        "7": "(15,253,405)",
+        "8": "(10,936,155)",
+        "9": "(2,054,609)"
+      }
+    },
+    {
+      "category": "Cashflow (after-tax)",
+      "unit": "$",
+      "total": "331,965,926",
+      "periods": {
+        "0": "(18,079,000)",
+        "1": "16,686,727",
+        "2": "55,012,746",
+        "3": "41,746,198",
+        "4": "55,519,173",
+        "5": "39,433,581",
+        "6": "30,032,528",
+        "7": "62,674,489",
+        "8": "44,907,226",
+        "9": "9,032,259",
+        "10": "(5,000,000)"
+      }
+    }
+  ]
+  },
+  "companyDocuments": {
+    "executiveSummary": {
+      "title": "Executive Summary",
+      "projectName": "Golden Sons Mining -- Minas y Cuevas Project",
+      "overview": "The Minas y Cuevas project is a gold mining opportunity with significant upside potential, backed by proven resources, strong economics, and exceptional political and operational support. The project is being led by Gene Puritch, President of P&E Mining Consultants, whose expertise includes over 460 NI 43-101 reports and helping 70 mining companies go public. With 250,000 ounces of recoverable gold, valued at $687.5M at the current gold price of $2,750/oz, this investment offers both near-term growth and long-term stability. GSM has spent 2 years conducting due diligence on this project and has also been working closely with the US Embassy for 18 months to ensure that all processes, procedures, and paperwork are done correctly.",
+      "keyProjectHighlights": {
+        "provenResource": [
+          "8.5M tonnes at 1.5 g/t gold Measured and Indicated open-pit mineable resource",
+          "The gold grade of 1.5 g/t is 5x the cutoff grade of 0.25-0.3 g/t",
+          "Defined by 451 drill holes, 160 trenches, and 70 pits",
+          "A minimum of 235,000 payable gold ounces projected over the mine's life (8.5 years)"
+        ],
+        "operationalStrength": [
+          "Total costs of $20/tonne and $800/oz cash cost",
+          "Proven heap leach process technology with recovery rates of 80% (oxide), 70% (transition), and 55% (sulfide)"
+        ],
+        "strongEconomics": [
+          "Post-tax IRR of 91% and NPV5 of $158M at $2,750/oz gold, improving to 129% IRR and $238M NPV5 at $2,750/oz gold",
+          "Rapid 0.8-year capital payback at current prices"
+        ],
+        "strategicLocation": [
+          "Proximity to infrastructure, including powerlines, the Pan American Highway, and local communities for labor",
+          "Brownfield site with opportunities to expand beyond the current 8.5-year mine life through additional exploration drilling, leaving a lot of upside potential"
+        ],
+        "strongPoliticalConnections": "The project has been strongly supported by former Congresswoman and Minister of SEDESPA (Secretary for the Development and Monitoring of Projects and Agreements), Fabiola Abudoj. We are one phone call away from the current president and have a much stronger relationship with the frontrunner for the next presidency, with the election being in November of 2025. These connections and others ensure robust political backing for the venture."
+      },
+      "proposedInvestmentStructure": {
+        "summary": "The GSM team seeks $1-$5M for 2.5%-12.5% equity to initiate critical next steps in the project.",
+        "useOfFunds": [
+          "Begin immediate property clean-up, improving safety standards and restoring the site to good standing",
+          "Kickstart the Pre-Feasibility Study (NI 43-101), expected to take 10 months",
+          "Completing the above will take less than one year and increase the project's valuation to $75M--$80M"
+        ],
+        "alternativeOptions": "Open to alternative structures, including off-take agreements, to accommodate investor preferences."
+      },
+      "nextSteps": "With funding in place, the team will focus on restoring the property, preparing for full operations, and completing the NI 43-101 report to transition the project to the next phase.",
+      "conclusion": "This opportunity combines proven resources, strong economics, and exceptional political and operational support, making it an ideal entry into the lucrative gold market."
+    },
+    "proposal": {
+      "introductionSummary": "After reviewing all data and conducting new studies, along with 600 drill holes of information from the property, Gene Puritch (President of P&E Mining Consultants, responsible for over 460 NI 43-101s and taking 70 mining companies public) has estimated that we should be able to recover around 250,000 oz of gold ($725M at $2900/oz). P&E estimates that the project, as it sits right now, is conservatively valued at $45M.",
+      "initialPlan": "Once we get this initial funding, we will immediately have P&E start the Pre-Feasibility Study for the NI 43-101 to get the proven reserves, which will take about 9-10 months. During this time, we will be cleaning up the property, improving safety standards, and getting everything back into good standing. After the completion of the 43-101, P&E estimates the project's value should be easily double what it is today without any additional exploration drilling.",
+      "investmentOptions": [
+        {
+          "option": "Option 1",
+          "equity": "12%",
+          "boardSeat": true,
+          "terms": [
+            "$6 million total",
+            "$2.25 million cash up front",
+            "$3.75 million cash payment 3.5 months after signing (for second round payment for the concession)"
+          ]
+        },
+        {
+          "option": "Option 2",
+          "equity": "4.5%",
+          "boardSeat": true,
+          "terms": [
+            "$2.025 million cash up front"
+          ]
+        },
+        {
+          "option": "Option 3",
+          "equity": "7.5%",
+          "boardSeat": true,
+          "terms": [
+            "$3.375 million cash up front"
+          ]
+        },
+        {
+          "option": "Option 4",
+          "equity": "Negotiable",
+          "terms": [
+            "We are open to different terms and structure if you would like an offtake agreement."
+          ]
+        }
+      ],
+      "offerValidity": {
+        "duration": "30 days",
+        "endDate": "March 28th, 2025"
+      }
+    }
+  },
+  "metaData": {
+    "projectName": "Golden Sons Mining - Minas y Cuevas Project",
+    "dataPreparationDate": "April 2, 2025",
+    "goldPriceAssumptions": {
+      "executiveSummary": "$2,750/oz",
+      "financialProjection": "$3,100/oz",
+      "proposal": "$2,900/oz"
+    },
+    "recoveryRates": {
+      "oxide": "78.0%",
+      "transition": "67.0%",
+      "sulfide": "52.0%"
+    },
+    "mineLifeProjection": "8.5 years",
+    "totalRecoverableGold": "234,709 oz",
+    "keyEconomicMetrics": {
+      "postTaxIRR": "91%",
+      "npv5": "$158M",
+      "paybackPeriod": "0.8 years"
+    },
+    "currentValuation": "$45M",
+    "projectedValuationAfterNI43101": "$75M-$80M"
+  }
+}
